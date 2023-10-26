@@ -9,7 +9,7 @@ import Selectedblog from "../components/selectedBlog/Selectedblog";
 
 function Singleblog() {
   const selectedBlog = useSelector((state) => state.blog.selectedBlog);
-  console.log(selectedBlog);
+ 
 
   return (
     <>
