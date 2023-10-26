@@ -5,7 +5,7 @@ function Footer() {
   const toggleClass = toggle ? "notContainer" : "container";
   useEffect(() => {
     const currentURL = window.location.href;
-    if (currentURL === "http://localhost:3000/a") {
+    if (currentURL === "http://localhost:3000/a") {  
       settoggle(true);
     }
   }, []);

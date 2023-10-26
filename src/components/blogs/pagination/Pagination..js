@@ -5,10 +5,8 @@ import "../pagination/Pagination.scss";
 function Paginantion({ arrayOfArticles, Page, setPage, total }) {
   const pageCount = total;
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * 6) % total; 
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    );
+    const newOffset = (event.selected * 6) % total;  
+    
     setPage(newOffset);
   };
   return (

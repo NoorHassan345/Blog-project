@@ -30,7 +30,7 @@ function Header() {
             <div className="Navbar-Menu">
               <ul>
                 <li>
-                  <NavLink to="/">Blog </NavLink>
+                  <NavLink to="/">Blog </NavLink> 
                 </li>
                 <li>
                   {" "}

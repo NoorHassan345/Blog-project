@@ -6,7 +6,7 @@ import Blogslice from "../components/blogs/blogList/Blogslice";
 const store = configureStore({
   reducer: {
     blog: Blogslice,
-    [apiSlice.reducerPath]: apiSlice.reducer,
+    [apiSlice.reducerPath]: apiSlice.reducer, 
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(apiSlice.middleware),

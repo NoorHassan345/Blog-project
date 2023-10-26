@@ -32,7 +32,7 @@ function Bloglist({ item }) {
     <>
       <div className={`box ${toggleclass} `}>
         <Link className="Link" to="/a">
-          <div onClick={handleBlogsClick}>
+          <div onClick={handleBlogsClick}>  
             <img src={item.urlToImage} alt="" className="img " />{" "}
           </div>
           <div>

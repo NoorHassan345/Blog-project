@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import Paginantion from "../pagination/Pagination.";
 
 function Blog() {
-  const [url, seturl] = useState(true);
+  const [url, seturl] = useState(true); 
   const [Page, setPage] = useState(1);
   const pageSize = 6;
 

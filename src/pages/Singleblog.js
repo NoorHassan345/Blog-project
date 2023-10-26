@@ -20,7 +20,7 @@ function Singleblog() {
             <Blog />
           </div>
           <div className="w1">
-            {selectedBlog && <Selectedblog selectedBlog={selectedBlog} />}
+            {selectedBlog &&  <Selectedblog selectedBlog={selectedBlog} />}
           </div>
         </div>
       </div>

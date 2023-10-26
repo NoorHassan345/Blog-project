@@ -8,7 +8,7 @@ function Mainpage() {
   return (
     <>
       <Header />
-      <Blog />
+      <Blog /> 
       <Footer />
     </>
   );

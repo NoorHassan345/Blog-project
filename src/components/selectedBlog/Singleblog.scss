@@ -5,7 +5,7 @@
 }
 
 .heading-SingleBlog {
-  @include heading(Inter, 36px, 700, 32px, normal);
+  @include heading(Inter, 36px, 700, 32px, normal);  
 }
 .description-SingleBlog {
   @include heading(Inter, 16px, 400, 24px, normal);

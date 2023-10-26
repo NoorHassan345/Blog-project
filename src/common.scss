@@ -1,7 +1,7 @@
 @import "./mixin";
 
 .heading {
-  @include heading(Inter, 24px, 600, 32px, normal);
+  @include heading(Inter, 24px, 600, 32px, normal);  
   color: #1a1a1a;
 }
 .author {
