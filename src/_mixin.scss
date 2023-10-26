@@ -1,9 +1,7 @@
-@mixin heading($family , $font-size , $font-weight , $line-height , $font-style ) {
-    font-family: $family; 
-    font-size: $font-size;
-    font-weight: $font-weight;
-    line-height: $line-height;
-    font-style: $font-style;
+@mixin heading($family, $font-size, $font-weight, $line-height, $font-style) {
+  font-family: $family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  font-style: $font-style;
 }
-
-
