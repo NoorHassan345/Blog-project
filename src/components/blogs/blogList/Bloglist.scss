@@ -2,13 +2,12 @@
 
 .blog-post-card-low-secreen {
   cursor: pointer;
-  
 }
 
 .Blog-post-card {
   cursor: pointer;
-  
-  @media screen  and (min-width: 539px) and (max-width: 768px) {
+
+  @media screen and (min-width: 539px) and (max-width: 768px) {
     width: calc(100% / 2 - 16px);
   }
   @media screen and (min-width: 769px) {
@@ -17,7 +16,6 @@
   @media screen and (max-width: 540px) {
     width: calc(95% / 1 - 0px);
   }
- 
 }
 .img {
   width: 100%;
@@ -27,13 +25,12 @@
 .author {
   color: #6941c6;
   text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .heading-and-icon {
-  
   display: flex;
   align-items: center;
   .heading {
@@ -58,5 +55,5 @@
   -webkit-box-orient: vertical;
 }
 .Link:hover {
-text-decoration: none;
+  text-decoration: none;
 }

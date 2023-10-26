@@ -30,8 +30,7 @@ function Bloglist({ item }) {
   };
   return (
     <>
-   
-      <div  className={`box ${toggleclass} `}>
+      <div className={`box ${toggleclass} `}>
         <Link className="Link" to="/a">
           <div onClick={handleBlogsClick}>
             <img src={item.urlToImage} alt="" className="img " />{" "}
@@ -49,7 +48,6 @@ function Bloglist({ item }) {
           </div>
         </Link>
       </div>
-      
     </>
   );
 }

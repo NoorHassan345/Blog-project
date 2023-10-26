@@ -11,5 +11,3 @@ export const apiSlice = createApi({
   }),
 });
 export const { useGetBlogsQuery, useAddBlogsMutation } = apiSlice;
-
-

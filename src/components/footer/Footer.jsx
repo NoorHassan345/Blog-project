@@ -1,8 +1,8 @@
-import React, { useState ,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "../footer/Footer.scss";
 function Footer() {
-  const [toggle , settoggle] = useState(false);
-  const toggleClass = toggle ? 'notContainer' : 'container';
+  const [toggle, settoggle] = useState(false);
+  const toggleClass = toggle ? "notContainer" : "container";
   useEffect(() => {
     const currentURL = window.location.href;
     if (currentURL === "http://localhost:3000/a") {

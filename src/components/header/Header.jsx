@@ -18,36 +18,36 @@ function Header() {
   }, []);
   return (
     <>
-    <div className=" container">
-      <div className="Navbar-Header">
-        <button className="buton" onClick={handleClickMenu}>
-          {" "}
-          <img className="Layer " src={Layer} alt="" />{" "}
-        </button>{" "}
-      </div>
-      {showmenu && (
-        <div className="Navbar">
-          <div className="Navbar-Menu">
-            <ul>
-              <li>
-                <NavLink to="/" >Blog </NavLink>
-              </li>
-              <li>
-                {" "}
-                <NavLink> Projects </NavLink>
-              </li>
-              <li>
-                {" "}
-                <NavLink> About </NavLink>
-              </li>
-              <li>
-                {" "}
-                <NavLink> Newsletter </NavLink>{" "}
-              </li>
-            </ul>
-          </div>
+      <div className=" container">
+        <div className="Navbar-Header">
+          <button className="buton" onClick={handleClickMenu}>
+            {" "}
+            <img className="Layer " src={Layer} alt="" />{" "}
+          </button>{" "}
         </div>
-      )}
+        {showmenu && (
+          <div className="Navbar">
+            <div className="Navbar-Menu">
+              <ul>
+                <li>
+                  <NavLink to="/">Blog </NavLink>
+                </li>
+                <li>
+                  {" "}
+                  <NavLink> Projects </NavLink>
+                </li>
+                <li>
+                  {" "}
+                  <NavLink> About </NavLink>
+                </li>
+                <li>
+                  {" "}
+                  <NavLink> Newsletter </NavLink>{" "}
+                </li>
+              </ul>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

@@ -1,26 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { ApiProvider } from '@reduxjs/toolkit/dist/query/react';
-import { apiSlice } from './features/api/apiSlice';
-import { Provider } from 'react-redux';
-import store from './app/Store';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { ApiProvider } from "@reduxjs/toolkit/dist/query/react";
+import { apiSlice } from "./features/api/apiSlice";
+import { Provider } from "react-redux";
+import store from "./app/Store";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
- 
   <React.StrictMode>
-
-  <ApiProvider api={apiSlice} >
-  <Provider store={store}>
-  <App />
-  </Provider>
-  </ApiProvider>
- 
- 
-    
+    <ApiProvider api={apiSlice}>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </ApiProvider>
   </React.StrictMode>
 );
 

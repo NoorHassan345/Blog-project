@@ -12,30 +12,20 @@ function Singleblog() {
   console.log(selectedBlog);
 
   return (
-    <> 
-  
+    <>
       <Header />
       <div className="single-Blog-Main">
-      <div className="Single-Blog">
-      <div className="max-width">
-      <Blog />
+        <div className="Single-Blog">
+          <div className="max-width">
+            <Blog />
+          </div>
+          <div className="w1">
+            {selectedBlog && <Selectedblog selectedBlog={selectedBlog} />}
+          </div>
+        </div>
       </div>
-      <div className="w1">
-         {selectedBlog && 
-           
-          
-              <Selectedblog selectedBlog= {selectedBlog} />
-              
-              
-         
-          } 
-          </div>
-          </div> 
-          </div>
       <Footer />
-     
-       
     </>
-  
-) }
+  );
+}
 export default Singleblog;

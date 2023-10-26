@@ -5,7 +5,7 @@
   gap: 30px;
   @media screen and (max-width: 576px) {
     padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 15px; 
   }
 
   .Blog-Main {
@@ -26,11 +26,9 @@
         }
         @media screen and (max-width: 540px) {
           display: flex;
-         flex-direction: column;
-         justify-content: center;
-         
+          flex-direction: column;
+          justify-content: center;
         }
-        
       }
     }
   }
