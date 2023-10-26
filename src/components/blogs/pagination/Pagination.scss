@@ -1,0 +1,42 @@
+.main-container {
+  justify-content:center;
+  padding-top: 20px;
+  color: #667085;
+  margin-bottom: 0px;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 15px;
+  
+  @media screen and (min-width: 350px) {
+    display: flex;
+    padding-left: 0px;
+  }
+}
+.pageClassName {
+  padding: 12px;
+  list-style: none;
+}
+.nextClassName {
+  padding: 12px;
+  list-style: none;
+}
+.previousClassName {
+  padding: 12px;
+  list-style: none;
+}
+.breakClassName {
+  list-style: none;
+  padding-top: 10px;
+}
+.previousLinkClassName {
+  color: #667085;
+}
+.nextLinkClassName {
+  color: #667085;
+}
+.activeClassName {
+  background: #f0f5f4fa;
+}

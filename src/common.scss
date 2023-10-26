@@ -1,0 +1,12 @@
+@import "./mixin";
+
+.heading {
+    @include heading(Inter , 24px , 600 , 32px , normal);
+    color: #1A1A1A;
+}
+.author {
+    @include heading(Inter , 14px , 600 , 20px , normal );
+}
+.description {
+    @include heading(Inter , 16px , 400 , 24px , normal);
+}
