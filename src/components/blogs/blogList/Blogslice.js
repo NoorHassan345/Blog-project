@@ -8,6 +8,7 @@ const blogSlice = createSlice({
       state.selectedBlog = action.payload;
     },
   }, 
-});
+}); 
 export const { blogClick } = blogSlice.actions;
+export const selectedBlogDetails = state => state.blog.selectedBlog
 export default blogSlice.reducer;

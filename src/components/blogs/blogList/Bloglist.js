@@ -7,7 +7,7 @@ import { blogClick } from "../blogList/Blogslice";
 
 import { Link } from "react-router-dom";
 
-function Bloglist({ item }) {
+function Bloglist({ item  }) {
   const dispatch = useDispatch();
   const date = new Date(item.publishedAt);
   const year = date.getFullYear();
@@ -16,7 +16,9 @@ function Bloglist({ item }) {
   const formatedDate = `${day} ${month} ${year}`;
 
   const [state, setState] = useState(false);
-
+  const handleBlogsClick = (a) => {
+    dispatch(blogClick(a));
+  };
   useEffect(() => {
     const currentURL = window.location.href;
     if (currentURL === "http://localhost:3000/a") {
@@ -25,20 +27,18 @@ function Bloglist({ item }) {
   }, []);
 
   const toggleclass = state ? "blog-post-card-low-secreen" : "Blog-post-card";
-  const handleBlogsClick = () => {
-    dispatch(blogClick(item));
-  };
+ 
   return (
     <>
-      <div className={`box ${toggleclass} `}>
+      <div className={`box ${toggleclass} `} >
         <Link className="Link" to="/a">
-          <div onClick={handleBlogsClick}>  
+          <div onClick={()=>handleBlogsClick(item)} >  
             <img src={item.urlToImage} alt="" className="img " />{" "}
-          </div>
+          
           <div>
             <p className="author">
               {" "}
-              {item.author} • {formatedDate}{" "}
+              {item.author} • {formatedDate}{" "}   
             </p>
             <div className="heading-and-icon">
               <h3 className="heading"> {item.title} </h3>{" "}
@@ -46,6 +46,7 @@ function Bloglist({ item }) {
             </div>
             <p className=" description"> {item.description} </p>
           </div>
+          </div> 
         </Link>
       </div>
     </>

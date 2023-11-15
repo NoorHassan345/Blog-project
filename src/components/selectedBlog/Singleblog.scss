@@ -34,11 +34,12 @@
 .Single-Blog {
   display: flex;
   flex-direction: row;
+ 
   padding: 0px 32px;
-  align-items: baseline;
+  align-items: flex-start;
   gap: 32px;
-  @media screen and (max-width: 736px) {
-    display: flex;
+  @media screen and (max-width: 736px) { 
+    display: flex; 
     flex-direction: column-reverse;
     padding-left: 15px;
     padding-right: 15px;

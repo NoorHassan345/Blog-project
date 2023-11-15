@@ -1,31 +1,40 @@
-import React from "react";
-import Header from "../components/header/Header";
-import Blog from "../components/blogs/blogmain/Blog";
-import Footer from "../components/footer/Footer";
+import React  from "react";
+
 import "../components/selectedBlog/Singleblog.scss";
 import "../common.scss";
 import { useSelector } from "react-redux";
 import Selectedblog from "../components/selectedBlog/Selectedblog";
+import { useGetSingleQuery } from "../features/api/apiSlice";
+
+import Bloglist from "../components/blogs/blogList/Bloglist";
 
 function Singleblog() {
-  const selectedBlog = useSelector((state) => state.blog.selectedBlog);
+  const pageSize = 10
+  const { data: todo } = useGetSingleQuery({pageSize} ); 
+  const selectedBlog = useSelector((state) => state.reducer.selectedBlog);
  
+ 
+if (todo) {
+ const array = todo.articles
 
   return (
     <>
-      <Header />
-      <div className="single-Blog-Main">
+    
+      <div className="single-Blog-Main">  
         <div className="Single-Blog">
           <div className="max-width">
-            <Blog />
+          {array.map((item, index) => (
+                  <Bloglist key={index} item={item} selectedBlog={selectedBlog} />
+                ))}
           </div>
           <div className="w1">
             {selectedBlog &&  <Selectedblog selectedBlog={selectedBlog} />}
           </div>
         </div>
       </div>
-      <Footer />
+      
     </>
   );
+}
 }
 export default Singleblog;

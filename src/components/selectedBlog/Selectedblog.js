@@ -9,7 +9,7 @@ function Selectedblog({ selectedBlog }) {
       <h1 className=" heading-SingleBlog "> {selectedBlog.title} </h1> 
       <img className="image" src={selectedBlog.urlToImage} alt="img" />
       <div className="description-SingleBlog">
-        <p> {selectedBlog.description} </p>
+        <p> {selectedBlog.description} </p> 
         <p> {selectedBlog.content} </p>
         <a href={selectedBlog.url}> click for more details </a>
       </div>

@@ -8,7 +8,7 @@ function Header() {
     setshowmenu(!showmenu);
   };
   useEffect(() => {
-    const handleResize = () => {
+    const handleResize = () => { 
       setshowmenu(window.innerWidth >= 540);
     };
     window.addEventListener("resize", handleResize);

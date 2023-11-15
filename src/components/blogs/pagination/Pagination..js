@@ -2,14 +2,15 @@ import React from "react";
 import ReactPaginate from "react-paginate";
 import "../pagination/Pagination.scss";
 
-function Paginantion({ arrayOfArticles, Page, setPage, total }) {
+function Paginantion({ Page , setPage, total }) {
   const pageCount = total;
-  const handlePageClick = (event) => {
-    const newOffset = (event.selected * 6) % total;  
+  const handlePageClick = ({selected}) => {
+   /* const newOffset = (event.selected * 6) % total; */ 
     
-    setPage(newOffset);
+    setPage(selected + 1);
+    console.log(Page)
   };
-  return (
+  return (  
     <>
       <ReactPaginate
         breakLabel="..."

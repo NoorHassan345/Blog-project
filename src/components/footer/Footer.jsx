@@ -12,7 +12,7 @@ function Footer() {
   return (
     <>
       <div className=" main-Footer">
-        <div className={`container ${toggleClass}`}>
+        <div className={`container ${toggleClass}`}>  
           <div className="Footer ">
             <ul className="Footer-List">
               <li> &copy; 2023 </li>

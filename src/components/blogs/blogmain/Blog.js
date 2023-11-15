@@ -3,22 +3,18 @@ import { useGetBlogsQuery } from "../../../features/api/apiSlice";
 import Bloglist from "../blogList/Bloglist";
 import "../blogmain/Blog.scss";
 import "../../../common.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Paginantion from "../pagination/Pagination.";
 
 function Blog() {
-  const [url, seturl] = useState(true); 
-  const [Page, setPage] = useState(1);
+  
+  const [Page, setPage] = useState(1); 
   const pageSize = 6;
 
   const { data: todo, error, isLoading } = useGetBlogsQuery({ Page, pageSize });
+  
 
-  useEffect(() => {
-    const currentURL = window.location.href;
-    if (currentURL === "http://localhost:3000/a") {
-      seturl(false);
-    }
-  }, []);
+   
 
   if (isLoading) {
     return (
@@ -43,15 +39,15 @@ function Blog() {
 
               <div className=" Row">
                 {arrayOfArticles.map((item, index) => (
-                  <Bloglist key={index} item={item} />
+                  <Bloglist key={index} item={item}  />
                 ))}
               </div>
             </div>
           </div>
         </div>
-
+       
         <div className="container">
-          {url && <Paginantion total={total} setPage={setPage} />}
+         <Paginantion Page = {Page} total={total} setPage={setPage} pageSize={pageSize} />  
         </div>
       </div>
     </>

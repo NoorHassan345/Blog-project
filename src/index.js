@@ -6,16 +6,22 @@ import reportWebVitals from "./reportWebVitals";
 import { ApiProvider } from "@reduxjs/toolkit/dist/query/react";
 import { apiSlice } from "./features/api/apiSlice";
 import { Provider } from "react-redux";
-import store from "./app/Store";
+import {store , persistor} from "./app/Store";
+
+import { PersistGate } from "redux-persist/integration/react";
 
 const root = ReactDOM.createRoot(document.getElementById("root")); 
 root.render(
   <React.StrictMode>
-    <ApiProvider api={apiSlice}>
+  
+    <ApiProvider api={apiSlice}> 
       <Provider store={store}>
+      <PersistGate persistor={persistor}>
         <App />
+        </PersistGate>
       </Provider>
     </ApiProvider>
+   
   </React.StrictMode>
 );
 
